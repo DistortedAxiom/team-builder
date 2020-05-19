@@ -9,6 +9,9 @@ const Team = props => {
                 <p>{member.name}</p>
                 <p>{member.email}</p>
                 <p>{member.role}</p>
+             <div>
+                 <button>Edit</button>
+             </div>
              </div>
             )}
         </>
