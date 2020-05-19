@@ -11,7 +11,13 @@ function App() {
     name: 'Disto',
     email: "distortedaxiom@asdf.com",
     role: "None",
-  }])
+  }]);
+
+  const [memberToEdit, setMemberToEdit] = useState({
+    name: "",
+    email: "",
+    role: ""
+  });
 
   const addMember = member => {
     setTeam([...team, member])
@@ -20,7 +26,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Team team={team} />
+        {team.map((el,i) => (
+          <Team team={el} key={i}/>
+        ))}
         <Form addMember={addMember}/>
       </header>
     </div>

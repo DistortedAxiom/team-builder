@@ -1,20 +1,21 @@
 import React from 'react'
+import "../App.css"
 
 const Team = props => {
-    return (
-        <>
-            {props.team.map((member, index) =>
 
-            <div key={index}>
-                <p>{member.name}</p>
-                <p>{member.email}</p>
-                <p>{member.role}</p>
+    const {team} = props
+
+    console.log(team);
+
+    return (
+            <div>
+                <h2>{team.name}</h2>
+                <p>{team.email}</p>
+                <p>{team.role}</p>
              <div>
                  <button>Edit</button>
              </div>
              </div>
-            )}
-        </>
     )
 }
 

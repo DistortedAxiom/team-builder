@@ -17,8 +17,6 @@ const Form = (props) => {
         setMember(formValue);
     }
 
-    console.log(props)
-
     return (
         <div>
             <div className="form-container">
